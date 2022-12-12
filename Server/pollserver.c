@@ -12,6 +12,8 @@
 #define PORT 42069
 #define CLIENT_COUNT_MAX 10
 
+static const char* msgsent = "Hugachaga Huga Huga Hugachaga!\r\n";
+
 int main(int argc, char const *argv[])
 {
     int server_fd, new_socket;
@@ -59,11 +61,13 @@ int main(int argc, char const *argv[])
     fdCount = 1;
 
     while(true){
+        printf("Poll\n");
         int pollCount = poll(pfds, fdCount, -1);
         if (pollCount == -1) {
             perror("poll");
             exit(1);
         }
+        printf("Poll finished\n");
 
         for(int i = 0; i < fdCount; i++){
             // is one ready?

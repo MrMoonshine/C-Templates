@@ -9,7 +9,7 @@
 #include <unistd.h>
 #include <string.h>
 
-#define PORT 8080
+#define PORT 53
 #define RESULTS_MAX 12
 #define ATTEMPTS 3
 
