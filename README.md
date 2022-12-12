@@ -1,2 +1,2 @@
-# Sockets-IPv6
-Template for IPv6 Sockets
+# C-Templates
+Template Repo for miscellaneous C projects.
